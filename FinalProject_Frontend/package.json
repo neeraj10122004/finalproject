@@ -1,6 +1,6 @@
 {
   "name": "basicextension",
-  "displayName": "BasicExtension",
+  "displayName": "MLExtension",
   "description": "VS Code trigger for live code analysis",
   "version": "0.0.1",
   "engines": {
