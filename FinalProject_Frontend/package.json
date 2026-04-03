@@ -1,0 +1,49 @@
+{
+  "name": "basicextension",
+  "displayName": "BasicExtension",
+  "description": "VS Code trigger for live code analysis",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.107.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "deepAnalysisContainer",
+          "title": "Analysis",
+          "icon": "ai.svg"
+        }
+      ]
+    },
+    "views": {
+      "deepAnalysisContainer": [
+        {
+          "id": "deepAnalysisView",
+          "name": "Deep Analysis",
+          "type": "webview",
+          "icon": "ai.svg"
+        }
+      ]
+    }
+  },
+  "main": "./extension.js",
+  "scripts": {
+    "lint": "eslint .",
+    "test": "vscode-test"
+  },
+  "dependencies": {
+    "node-fetch": "^2.7.0"
+  },
+  "devDependencies": {
+    "@types/node": "22.x",
+    "@types/vscode": "^1.107.0",
+    "eslint": "^9.39.1"
+  }
+}
